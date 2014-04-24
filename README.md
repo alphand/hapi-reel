@@ -1,4 +1,8 @@
-hapi-reel
+HAPI-Reel
 =========
 
-initial hapi templates 
+HAPI MVC Web and API Boilerplate structure
+
+Objectives:
+========
+Create a base HAPI MVC boilerplate to simplify the starting process
