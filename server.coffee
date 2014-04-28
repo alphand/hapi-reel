@@ -6,10 +6,12 @@ class Server
     @server = Hapi.createServer('0.0.0.0',config.port,config.hapi.options)
     @setPlugins()
     @setRoute()  
-  start: ->
+  start: (cb)->
     @server.start( ->
       console.log "HAPI Server is started on 0.0.0.0:#{config.port}"
+      cb() if cb?
     )
+    @server
   stop: (cb)->
     @server.stop(->
       console.log("HAPI Server stopped")
